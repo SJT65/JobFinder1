@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details</title>
+    <link rel="stylesheet" href="job-details.css" />
+  </head>
+  <body>
+    <!-- ✅ Navbar -->
+    <header class="navbar">
+      <h1>Jobfinder</h1>
+      <div id="userActions">
+        <a href="login.html" class="btn">Login</a>
+        <a href="register.html" class="btn btn-register">Register</a>
+      </div>
+    </header>
+
+    <!-- ✅ Company Name -->
+    <div class="comFullname">
+      <h1>
+        Company Name: <span id="companyName">Tata Consultancy Services</span>
+      </h1>
+      <button id="editBtn" class="edit-btn">✏️ Edit</button>
+    </div>
+
+    <!-- ✅ Main Details Section -->
+    <div class="aboutComoInfo">
+      <h2>About Company:</h2>
+      <p id="aboutCompany">We are India’s top IT services firm...</p>
+
+      <h2>About the Job/Internship:</h2>
+      <p id="aboutJob">You will be responsible for frontend development...</p>
+
+      <h2>Skills Required:</h2>
+      <p id="skillsRequired">HTML, CSS, JavaScript</p>
+
+      <h2>Additional Information:</h2>
+      <p id="additionalInfo">Job location is on-site, with flexible hours...</p>
+    </div>
+
+    <!-- ✅ Floating Popup Modal Form -->
+    <div id="editModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <h2>Edit Company Details</h2>
+        <form id="editForm">
+          <label for="editCompanyName">Company Name:</label>
+          <input type="text" id="editCompanyName" required />
+
+          <label for="editCompanyInfo">About Company:</label>
+          <textarea id="editCompanyInfo" rows="3" required></textarea>
+
+          <label for="editJobInfo">About the Job/Internship:</label>
+          <textarea id="editJobInfo" rows="3" required></textarea>
+
+          <label for="editSkills">Skills Required:</label>
+          <textarea id="editSkills" rows="2" required></textarea>
+
+          <label for="editAdditional">Additional Information:</label>
+          <textarea id="editAdditional" rows="2" required></textarea>
+
+          <button type="submit" class="btn">Save</button>
+        </form>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px">
+      <button onclick="goHome()" class="btn back-btn">Back to Home</button>
+    </div>
+
+    <!-- ✅ Optional Banner Section -->
+    <section class="banner" id="jobBanner"></section>
+
+    <!-- ✅ JavaScript File -->
+    <script src="job-details.js"></script>
+  </body>
+</html>

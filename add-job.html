@@ -1,0 +1,46 @@
+<!-- add-job.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Job</title>
+    <link rel="stylesheet" href="add-job.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>Add Job Description</h1>
+    </header>
+
+    <section class="job-form-section">
+      <form id="jobForm">
+        <input type="text" id="title" placeholder="Job Title" required />
+        <input type="text" id="company" placeholder="Company Name" required />
+        <input type="text" id="location" placeholder="Location" required />
+        <input type="text" id="salary" placeholder="Salary" required />
+        <input
+          type="text"
+          id="category"
+          placeholder="Category (e.g., Frontend)"
+          required
+        />
+        <input
+          type="text"
+          id="skills"
+          placeholder="Skills (comma separated)"
+          required
+        />
+        <input
+          type="text"
+          id="image"
+          placeholder="Image Path (e.g., images/l5.png)"
+          required
+        />
+        <button type="submit" class="btn">Add Job</button>
+      </form>
+      <a href="index.html" class="btn">Back to Home</a>
+    </section>
+
+    <script src="add-job.js"></script>
+  </body>
+</html>

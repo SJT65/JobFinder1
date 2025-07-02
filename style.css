@@ -1,0 +1,143 @@
+/* Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #ff4d4d;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  background: white;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* Filter Section */
+.filter-section {
+  background: #ffecec;
+  padding: 1rem 2rem;
+  text-align: center;
+  
+}
+
+.search-box {
+  width: 60%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+/* Dropdown */
+.select-box {
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Job Listing Area */
+.job-list {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Job Card Styling */
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Image inside card */
+.job-header img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+/* Header: image + title/location + skills */
+.job-header {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+}
+
+/* Title + Location */
+.job-header-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.job-header-details h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f44336;
+}
+
+.job-header-details p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+Skill tags
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+} 
+
+.job-tags span {
+  background: #ffe0e0;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+/* Footer: Salary, Category, Office, View Button */
+.job-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.job-footer span {
+  font-size: 14px;
+  color: #444;
+}

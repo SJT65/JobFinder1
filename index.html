@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobfinder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <h1>Jobfinder</h1>
+      <div id="userActions">
+        <a href="login.html" class="btn">Login</a>
+        <a href="register.html" class="btn btn-register">Register</a>
+        <a href="add-job.html" class="btn">Add Job</a>
+      </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <!-- Search Box -->
+      <input
+        type="text"
+        id="searchInput"
+        class="search-box"
+        placeholder="Type any job title or skill"
+      />
+
+      <!-- Skills Dropdown -->
+      <select id="categorySelect" class="select-box">
+        <option value="">Skills</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="Fullstack">Fullstack</option>
+        <option value="DevOps">DevOps</option>
+      </select>
+
+      <!-- Filter Buttons -->
+      <div class="filter-btns">
+        <button class="btn" onclick="applyFilter()">Apply Filter</button>
+
+        <button class="btn btn-clear" onclick="clearFilter()">Clear</button>
+      </div>
+    </section>
+
+    <!-- Job Cards Section -->
+    <section class="job-list" id="jobList">
+      <a href="job-details.html" class="btn">View details</a>
+    </section>
+
+    <!-- JS Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        const userActions = document.getElementById("userActions");
+
+        if (user && userActions) {
+          // Clear previous buttons
+          userActions.innerHTML = `
+        <span class="welcome-text">Welcome, ${user.name}</span>
+        <a href="add-job.html" class="btn">Add Job</a>
+        <button id="logoutBtn" class="btn">Logout</button>
+      `;
+
+          // Logout functionality
+          const logoutBtn = document.getElementById("logoutBtn");
+          logoutBtn.addEventListener("click", () => {
+            localStorage.removeItem("loggedInUser");
+            location.reload();
+          });
+        }
+      });
+    </script>
+    <script src="job.js"></script>
+  </body>
+</html>
